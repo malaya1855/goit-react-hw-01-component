@@ -30,12 +30,14 @@ export const Profile = ({ username, tag, location, avatar, stats}) => { return <
 </div>}
 
 Profile.propTypes={
-  username:pts, tag, location, avatar, stats
-  poster:PropTypes.string.isRequired,
-  tag:PropTypes.string.isRequired,
-  title:PropTypes.string.isRequired,
-  description:PropTypes.string.isRequired,
-  userName:PropTypes.string.isRequired,
+  username:PropTypes.string.isRequired, 
+  tag: PropTypes.string.isRequired,
+  location:PropTypes.string.isRequired,
   avatar:PropTypes.string.isRequired,
-  postedAt:PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
+  
 }

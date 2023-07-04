@@ -1,4 +1,4 @@
-
+import PropTypes from "prop-types";
 import { FriendsListItem } from "components/FriendListItem/FriendListItem"
 
 
@@ -10,3 +10,11 @@ avatar={item.avatar}
 name={item.name}
 status = {item.isOnline}/>)}    </ul>
 }
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+      }),
+    ).isRequired,
+  };
