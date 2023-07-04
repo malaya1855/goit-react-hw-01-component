@@ -18,5 +18,5 @@ Statictics.propTypes = {
           id: PropTypes.string.isRequired,
         }),
       ).isRequired,
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
 }

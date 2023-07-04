@@ -1,33 +1,34 @@
 
 import PropTypes from "prop-types";
 
-export const Profile = ({ username, tag, location, avatar, stats}) => { return <div class="profile">
-<div class="description">
-  <img
+import {Card, Avatar, Title, Info, InfoStyle, Stats, Label, Quantity, StatsListItem} from 'components'
+
+export const Profile = ({ username, tag, location, avatar, stats}) => { return <Card>
+<InfoStyle>
+  <Avatar
     src={avatar}
     alt="User avatar"
-    class="avatar"
   />
-  <p class="name">{username}</p>
-  <p class="tag">{tag}</p>
-  <p class="location">{location}</p>
-</div>
+  <Title>{username}</Title>
+  <Info>{tag}</Info>
+  <Info>{location}</Info>
+</InfoStyle>
 
-<ul class="stats">
-  <li>
-    <span class="label">Followers</span>
-    <span class="quantity">{stats.followers}</span>
-  </li>
-  <li>
-    <span class="label">Views</span>
-    <span class="quantity">{stats.views}</span>
-  </li>
-  <li>
-    <span class="label">Likes</span>
-    <span class="quantity">{stats.likes}</span>
-  </li>
-</ul>
-</div>}
+<Stats>
+  <StatsListItem>
+    <Label>Followers</Label>
+    <Quantity>{stats.followers}</Quantity>
+  </StatsListItem>
+  <StatsListItem>
+    <Label>Views</Label>
+    <Quantity>{stats.views}</Quantity>
+  </StatsListItem>
+  <StatsListItem>
+    <Label>Likes</Label>
+    <Quantity>{stats.likes}</Quantity>
+  </StatsListItem>
+</Stats>
+</Card>}
 
 Profile.propTypes={
   username:PropTypes.string.isRequired, 
