@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
+import {StatsListField, LabelName, Percentage} from 'components'
 
 
 export const StatsItem = ({label, percentage}) => { 
-    return <li class="item">
-    <span class="label">{label}</span>
-    <span class="percentage">{percentage}</span>
-  </li>
+    return <StatsListField>
+    <LabelName>{label}</LabelName>
+    <Percentage>{percentage}</Percentage>
+  </StatsListField>
 }
 
 StatsItem.propTypes = {

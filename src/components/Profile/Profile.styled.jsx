@@ -1,19 +1,24 @@
 import styled from '@emotion/styled'
 
 export const Card = styled.div`
-width: 300px;
+width: 400px;
     background-color: #FFF;
     margin-right: auto;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;`
 
 export const InfoStyle = styled.div`
-text-align: center`
+text-align: center;
+padding-top: 16px;`
 
     export const Avatar = styled.img`
 display: block;
-    max-width: 100%;
-    height: auto;`
+width: 100px;
+height: auto;
+    margin-left: auto;
+  margin-right: auto;
+    border-radius: 50%;
+    `
 
     export const Title = styled.p`
     font-size: 20px;
